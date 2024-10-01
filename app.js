@@ -37,7 +37,8 @@ var transporter = nodemailer.createTransport({
 const db = mysql.createConnection({
   host: process.env.MYSQL_ADDON_HOST || "localhost",
   user: process.env.MYSQL_ADDON_USER || "root",
-  database: process.env.MYSQL_ADDON_DB || "shoppy"
+  database: process.env.MYSQL_ADDON_DB || "shoppy",
+  password: process.env.MYSQL_ADDON_PASSWORD || ""
 });
 
 /////////////////// fetching data from the  table/////////////////////
