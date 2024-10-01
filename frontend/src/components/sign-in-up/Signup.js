@@ -26,7 +26,7 @@ const Signup = () => {
   let [m, setm] = useState("");
   let [o, seto] = useState(false);
   let [s, sets] = useState("success");
-  Axios.post("http://localhost:8000/cart", {
+  Axios.post("https://trendvault.onrender.com/cart", {
     name: "ayush",
   }).then((response) => {
     if (response.data.data === true) {
@@ -58,7 +58,7 @@ const Signup = () => {
         seto(true);
         sets("warning");
       } else {
-        Axios.post("http://localhost:8000/register", {
+        Axios.post("https://trendvault.onrender.com/register", {
           email: email,
           pass: pass,
           name: name,

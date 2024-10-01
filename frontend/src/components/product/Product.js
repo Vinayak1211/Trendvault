@@ -22,7 +22,7 @@ const Product = (props) => {
   // add to cart function
 
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -57,7 +57,7 @@ const Product = (props) => {
       seto(true);
       sets("info");
     } else {
-      Axios.post("http://localhost:8000/addtocart", {
+      Axios.post("https://trendvault.onrender.com/addtocart", {
         product_id: props.location.state.data.p_id,
         product_size: size,
       }).then((response) => {

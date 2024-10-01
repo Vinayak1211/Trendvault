@@ -11,7 +11,7 @@ const Checkout = (props) => {
   let name, addres, mobile, total;
   const history = useHistory();
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -42,7 +42,7 @@ const Checkout = (props) => {
 
   function confirm() {
     if (window.confirm("Place order")) {
-      Axios.post("http://localhost:8000/addorders", {
+      Axios.post("https://trendvault.onrender.com/addorders", {
         o_data: props.location.state.p_data,
         d_addres: addres,
         d_mobile: mobile,

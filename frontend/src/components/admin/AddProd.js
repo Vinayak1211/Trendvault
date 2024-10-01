@@ -26,7 +26,7 @@ const AddProd = () => {
   let [o, seto] = useState(false);
   let [s, sets] = useState("success");
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -50,7 +50,7 @@ const AddProd = () => {
   /////////////////// get pid
 
   const getpid = () => {
-    Axios.post("http://localhost:8000/getpid")
+    Axios.post("https://trendvault.onrender.com/getpid")
       .then((response) => {
         console.log(" response", response.data);
         setPiD(response.data.max);
@@ -73,7 +73,7 @@ const AddProd = () => {
       seto(true);
       sets("info");
     } else {
-      Axios.post("http://localhost:8000/adminAddProduct", {
+      Axios.post("https://trendvault.onrender.com/adminAddProduct", {
         PName: PName,
         PPrice: PPrice,
         PType: PType,

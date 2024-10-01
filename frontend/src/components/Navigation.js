@@ -15,7 +15,7 @@ Axios.defaults.withCredentials = true;
 function Navigation() {
   const history = useHistory();
   const check = () => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     })
       .then((response) => {

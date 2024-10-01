@@ -24,7 +24,7 @@ const Cart = () => {
   const deliveryData = [name, addres, mobile, total];
   const [data, setData] = useState([]);
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -47,7 +47,7 @@ const Cart = () => {
     // console.log("flag ki value hai ye", flag);
   }, []);
   function showdata() {
-    Axios.post("http://localhost:8000/data", {
+    Axios.post("https://trendvault.onrender.com/data", {
       category: "cart",
     })
       .then((response) => {
@@ -90,7 +90,7 @@ const Cart = () => {
   ///////// delete from cart/////////////////
   function del(index) {
     if (window.confirm("Are you sure you want to delete this!")) {
-      Axios.post("http://localhost:8000/del", {
+      Axios.post("https://trendvault.onrender.com/del", {
         p_id: data[index].p_id,
         p_size: data[index].p_size,
       }).then((response) => {

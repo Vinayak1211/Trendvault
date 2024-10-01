@@ -15,7 +15,7 @@ const Profile = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
-  Axios.post("http://localhost:8000/cart", {
+  Axios.post("https://trendvault.onrender.com/cart", {
     name: "ayush",
   }).then((response) => {
     if (response.data.data === false) {
@@ -36,7 +36,7 @@ const Profile = () => {
   });
   const logout = () => {
     console.log("hey");
-    Axios.post("http://localhost:8000/logout", {
+    Axios.post("https://trendvault.onrender.com/logout", {
       usr: "customer",
     }).then((response) => {
       console.log(response.data);

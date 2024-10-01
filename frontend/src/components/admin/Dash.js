@@ -18,7 +18,7 @@ const Dash = () => {
   const [data, setData] = useState([]);
   const logout = () => {
     console.log("hey");
-    Axios.post("http://localhost:8000/logout", {
+    Axios.post("https://trendvault.onrender.com/logout", {
       usr: "admin",
     }).then((response) => {
       console.log(response.data);
@@ -29,7 +29,7 @@ const Dash = () => {
   };
 
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -53,7 +53,7 @@ const Dash = () => {
   }, []);
 
   function showdata() {
-    Axios.post("http://localhost:8000/customer")
+    Axios.post("https://trendvault.onrender.com/customer")
       .then((response) => {
         if (response.data.length > 0) {
           setData(response.data);

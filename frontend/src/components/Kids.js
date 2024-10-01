@@ -19,7 +19,7 @@ const Kid = () => {
   const history = useHistory();
   const [data, setData] = useState([]);
   useEffect(() => {
-    Axios.post("http://localhost:8000/data", {
+    Axios.post("https://trendvault.onrender.com/data", {
       category: "kids",
     }).then((response) => {
       setData(response.data);

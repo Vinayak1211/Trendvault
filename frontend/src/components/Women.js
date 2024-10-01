@@ -19,7 +19,7 @@ const Women = () => {
   const history = useHistory();
   const [data, setData] = useState([]);
   useEffect(() => {
-    Axios.post("http://localhost:8000/data", {
+    Axios.post("https://trendvault.onrender.com/data", {
       category: "women",
     }).then((response) => {
       setData(response.data);

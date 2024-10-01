@@ -32,7 +32,7 @@ const MyOrder = () => {
   };
 
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -51,7 +51,7 @@ const MyOrder = () => {
   }, []);
   function showOrder() {
     console.log("hi i am called");
-    Axios.post("http://localhost:8000/data", {
+    Axios.post("https://trendvault.onrender.com/data", {
       category: "myorder",
     })
       .then((response) => {

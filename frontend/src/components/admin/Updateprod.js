@@ -25,7 +25,7 @@ const Updateprod = (props) => {
   let [o, seto] = useState(false);
   let [s, sets] = useState("success");
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -66,7 +66,7 @@ const Updateprod = (props) => {
         "Fields left empty will not be updated! Are you sure you want to update"
       )
     ) {
-      Axios.post("http://localhost:8000/update", {
+      Axios.post("https://trendvault.onrender.com/update", {
         p_name: PName,
         p_id: PiD,
         p_type: PType,

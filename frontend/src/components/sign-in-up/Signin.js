@@ -28,7 +28,7 @@ const Sign = (props) => {
   let [s, sets] = useState("success");
 
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       console.log(response);
@@ -60,7 +60,7 @@ const Sign = (props) => {
           user = "admin";
         }
       }
-      Axios.post("http://localhost:8000/login", {
+      Axios.post("https://trendvault.onrender.com/login", {
         email: email,
         pass: pass,
         usr: user,

@@ -13,7 +13,7 @@ Axios.defaults.withCredentials = true;
 const Nlog = () => {
   const history = useHistory();
   useEffect(() => {
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       console.log(response);

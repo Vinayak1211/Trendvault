@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:3000",
+  "proxy": "https://trendvault.vercel.app/",
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^5.1.0",

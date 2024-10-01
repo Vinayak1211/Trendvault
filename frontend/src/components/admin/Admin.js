@@ -34,7 +34,7 @@ const Admin = () => {
   const [PImg, setPImg] = useState("");
   useEffect(() => {
     showdata();
-    Axios.post("http://localhost:8000/cart", {
+    Axios.post("https://trendvault.onrender.com/cart", {
       name: "ayush",
     }).then((response) => {
       if (response.data.data === false) {
@@ -55,7 +55,7 @@ const Admin = () => {
 
   function adminDel(index) {
     if (window.confirm("Are you sure you want to delete this!")) {
-      Axios.post("http://localhost:8000/adminDel", {
+      Axios.post("https://trendvault.onrender.com/adminDel", {
         p_id: data[index].p_id,
       }).then((response) => {
         if (response.data.length > 0) {
@@ -72,7 +72,7 @@ const Admin = () => {
     }
   }
   function showdata() {
-    Axios.post("http://localhost:8000/data", {
+    Axios.post("https://trendvault.onrender.com/data", {
       category: "men",
     })
       .then((response) => {
