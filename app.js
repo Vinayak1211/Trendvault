@@ -380,7 +380,6 @@ app.post("/login", (req, res) => {
         "LogedIn",
         { usr: usr, mobile: email, email: email, name: usr, LogedIn: true },
         {
-          httpOnly: true,
           sameSite: "strict",
           expires: new Date(
             new Date().getTime() + 3600 * 15 * 1000
