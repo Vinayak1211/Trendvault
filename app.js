@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://trendvault.vercel.app/",
+    origin: "*",
     credentials: true,
   })
 );
